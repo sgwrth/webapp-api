@@ -17,13 +17,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "awsuser")
 public class User implements UserDetails {
     @Id
     @GeneratedValue
     private Integer id;
-    private String firstname;
-    private String lastname;
+    private String accountname;
     private String email;
     private String password;
 
