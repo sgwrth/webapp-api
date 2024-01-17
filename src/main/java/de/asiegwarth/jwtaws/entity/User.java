@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.user;
+package de.asiegwarth.jwtaws.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,7 +21,7 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     private String accountname;
     private String email;
     private String password;

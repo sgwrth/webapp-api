@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo;
+package de.asiegwarth.jwtaws;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

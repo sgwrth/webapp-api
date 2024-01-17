@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.demo;
+package de.asiegwarth.jwtaws.controller.demo;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;

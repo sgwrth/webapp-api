@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.config;
+package de.asiegwarth.jwtaws.config;
 
 import io.micrometer.common.lang.NonNull;
 import jakarta.servlet.FilterChain;

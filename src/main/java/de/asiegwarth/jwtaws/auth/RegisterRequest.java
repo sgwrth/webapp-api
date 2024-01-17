@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.auth;
+package de.asiegwarth.jwtaws.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

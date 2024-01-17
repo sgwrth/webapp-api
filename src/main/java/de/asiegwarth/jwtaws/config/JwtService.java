@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.config;
+package de.asiegwarth.jwtaws.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

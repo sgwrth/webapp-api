@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.config;
+package de.asiegwarth.jwtaws.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

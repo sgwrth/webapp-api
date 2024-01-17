@@ -1,6 +1,7 @@
-package de.asiegwarth.jwtdemo.auth;
+package de.asiegwarth.jwtaws.auth;
 
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ public class AuthenticationController {
     private final AuthenticationService service;
 
     @CrossOrigin
-    @PostMapping("/register")
+    @PostMapping("/register") 
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ) {

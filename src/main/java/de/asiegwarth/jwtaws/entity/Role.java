@@ -1,4 +1,4 @@
-package de.asiegwarth.jwtdemo.user;
+package de.asiegwarth.jwtaws.entity;
 
 public enum Role {
     USER,

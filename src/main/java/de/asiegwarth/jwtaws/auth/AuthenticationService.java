@@ -1,14 +1,15 @@
-package de.asiegwarth.jwtdemo.auth;
+package de.asiegwarth.jwtaws.auth;
 
-import de.asiegwarth.jwtdemo.config.JwtService;
-import de.asiegwarth.jwtdemo.user.Role;
-import de.asiegwarth.jwtdemo.user.User;
-import de.asiegwarth.jwtdemo.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import de.asiegwarth.jwtaws.config.JwtService;
+import de.asiegwarth.jwtaws.entity.Role;
+import de.asiegwarth.jwtaws.entity.User;
+import de.asiegwarth.jwtaws.repository.UserRepository;
 
 @Service
 @RequiredArgsConstructor
