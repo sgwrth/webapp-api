@@ -34,7 +34,10 @@ public interface EmployeeService {
 
         @Override
         public ResponseEntity<Employee> update(Long id, Employee employee) {
-            return ResponseEntity.ok(repository.save(employee));
+            Employee updatedEmployee = repository.findById(id).get();
+            updatedEmployee.setFirstName(employee.getFirstName());
+            updatedEmployee.setLastName(employee.getLastName());
+            return ResponseEntity.ok(repository.save(updatedEmployee));
         }
 
         @Override
