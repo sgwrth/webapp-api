@@ -1,5 +1,6 @@
 package de.asiegwarth.jwtaws.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ public interface EmployeeService {
 
         @Override
         public ResponseEntity<Employee> save(Employee employee) {
+            employee.setCreatedWhen(LocalDateTime.now());
+            employee.setLastEditedWhen(LocalDateTime.now());
             return ResponseEntity.ok(repository.save(employee));
         }
 
@@ -37,6 +40,8 @@ public interface EmployeeService {
             Employee updatedEmployee = repository.findById(id).get();
             updatedEmployee.setFirstName(employee.getFirstName());
             updatedEmployee.setLastName(employee.getLastName());
+            updatedEmployee.setLastEditedWhen(LocalDateTime.now());
+            updatedEmployee.setLastEditedBy(employee.getLastEditedBy());
             return ResponseEntity.ok(repository.save(updatedEmployee));
         }
 

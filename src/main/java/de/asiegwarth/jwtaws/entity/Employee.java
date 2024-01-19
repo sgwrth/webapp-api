@@ -32,5 +32,9 @@ public class Employee {
     private String createdBy;
     @Column(name = "createdwhen")
     private LocalDateTime createdWhen;
+    @Column(name = "lasteditedby")
+    private String lastEditedBy;
+    @Column(name = "lasteditedwhen")
+    private LocalDateTime lastEditedWhen;
 
 }
