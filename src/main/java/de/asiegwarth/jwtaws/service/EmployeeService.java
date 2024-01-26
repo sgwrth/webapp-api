@@ -22,6 +22,12 @@ public interface EmployeeService {
         public ResponseEntity<Employee> save(Employee employee) {
             employee.setCreatedWhen(LocalDateTime.now());
             employee.setLastEditedWhen(LocalDateTime.now());
+            if (employee.getCreatedBy() == null) {
+                employee.setCreatedBy("(backend)");
+            }
+            if (employee.getLastEditedBy() == null) {
+                employee.setLastEditedBy("(backend)");
+            }
             return ResponseEntity.ok(repository.save(employee));
         }
 
