@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import de.asiegwarth.jwtaws.entity.Employee;
 import de.asiegwarth.jwtaws.service.EmployeeService;
+import jakarta.validation.Valid;
 
 @RestController
 @CrossOrigin
@@ -27,7 +28,7 @@ public class EmployeeController {
 
     @CrossOrigin
     @PostMapping
-    private ResponseEntity<Employee> save(@RequestBody Employee employee) {
+    private ResponseEntity<Employee> save(@RequestBody @Valid Employee employee) {
         return service.save(employee);
     }
 
