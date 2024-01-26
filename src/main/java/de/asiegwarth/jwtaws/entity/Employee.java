@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,5 +37,8 @@ public class Employee {
     private String lastEditedBy;
     @Column(name = "lasteditedwhen")
     private LocalDateTime lastEditedWhen;
+    @Column(name = "salary")
+    @Max(value = 100, message = "error.form.maxValue")
+    private Double salary;
 
 }
