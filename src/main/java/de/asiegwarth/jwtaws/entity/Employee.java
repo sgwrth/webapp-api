@@ -1,5 +1,6 @@
 package de.asiegwarth.jwtaws.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -19,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "employee")
-public class Employee {
+public class Employee implements Serializable {
     
     @Id
     @GeneratedValue
