@@ -32,6 +32,7 @@ public class AuthenticationService {
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .accountname(user.getAccountname())
+                .email(user.getEmail())
                 .build();
     }
 
