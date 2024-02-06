@@ -1,0 +1,31 @@
+spring:
+  config:
+    activate:
+      on-profile: localbuild
+  datasource:
+    url: jdbc:mariadb://3.67.169.17:3306/jwt
+    username: root
+    password: i56&3$TBTdgd#@bGb56&bnFg
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+    import: optional:configtree:/run/secrets/
+  datasource:
+    url: ${be_db_url}
+    user: ${be_db_user}
+    password: ${be_db_password}
+# driver-class-name & ddl-auto -> handled in docker-compose file
+    # driver-class-name: org.mariadb.jdbc.Driver
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+server:
+  port: 8081
