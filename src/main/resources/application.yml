@@ -3,9 +3,9 @@ spring:
     activate:
       on-profile: localbuild
   datasource:
-    url: jdbc:mariadb://3.67.169.17:3306/jwt
-    username: root
-    password: i56&3$TBTdgd#@bGb56&bnFg
+    url: ${MARIADB_ADDRESS}
+    username: ${MARIADB_USER}
+    password: ${MARIADB_PW}
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
@@ -23,9 +23,5 @@ spring:
     user: ${be_db_user}
     password: ${be_db_password}
 # driver-class-name & ddl-auto -> handled in docker-compose file
-    # driver-class-name: org.mariadb.jdbc.Driver
-  # jpa:
-  #   hibernate:
-  #     ddl-auto: update
 server:
   port: 8081
